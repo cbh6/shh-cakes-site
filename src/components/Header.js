@@ -9,7 +9,7 @@ class Header extends React.Component {
                     <ul>
                         <li><a href="#">Sobre mí</a></li>
                         <li><a href="#">Tartas</a></li>
-                        <li><a href="#">Pedidos/Contacto</a></li>
+                        <li><a href="#">Contacto</a></li>
                     </ul>
                 </nav>
             </section>

@@ -1,7 +1,7 @@
-import React from "react";
-import Helmet from "react-helmet";
+import React from 'react'
+import Helmet from 'react-helmet'
 
-import Layout from '../components/layout';
+import Layout from '../components/layout'
 
 import pic01 from '../assets/images/pic01.jpg'
 import pic02 from '../assets/images/pic02.jpg'
@@ -9,14 +9,22 @@ import pic03 from '../assets/images/pic03.jpg'
 import pic04 from '../assets/images/pic04.jpg'
 
 class Homepage extends React.Component {
-    render() {
-        const siteTitle = "Gatsby Starter - Photon";
+  render() {
+    const siteTitle = 'Gatsby Starter - Photon'
 
-        return (
-            <Layout>
-                <Helmet title={siteTitle} />
+    return (
+      <Layout>
+        <Helmet title={siteTitle} />
 
-                {/* <section id="one" className="main style1">
+        <section className="hero-header">
+          <h2>Tartas. Eslogan para el site</h2>
+          <h3>Nombre repostería</h3>
+        </section>
+
+        <main>
+          <p>And the main section.</p>
+        </main>
+        {/* <section id="one" className="main style1">
                     <div className="grid-wrapper">
                         <div className="col-6">
                             <header className="major">
@@ -104,9 +112,9 @@ class Homepage extends React.Component {
                         </ul>
                     </div>
                 </section> */}
-            </Layout>
-        );
-    }
+      </Layout>
+    )
+  }
 }
 
-export default Homepage;
+export default Homepage
