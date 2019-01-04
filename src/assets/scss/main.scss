@@ -5,9 +5,13 @@ body {
 /* Variables =======================================
   ================================================== */
 $brownCake: #422117;
+$brownCakeShadow: #422117cc;
+$lightBrownCake: #603123;
 $lightOrangeCake: rgb(255, 214, 137);
 $lightBlueCake: rgb(115, 216, 216);
-$yellowPhoto: #feffdc;
+$blueCakeShadow: rgba(149, 230, 195, 0.517);
+$yellowCake: #f0e069;
+$lightYellowCake: #f1e68d;
 $bluePhoto: #dcfffb;
 $lightRedCake: #7d4635;
 
@@ -20,7 +24,7 @@ $lightRedCake: #7d4635;
   justify-content: space-between;
   overflow: hidden;
   align-items: center;
-  background-color: $brownCake;
+  background-image: linear-gradient(to right, $lightBrownCake, $brownCake, $lightBrownCake);
   padding: 20px 20px 0;
 
   @media only screen and (min-width: 790px) {
@@ -55,13 +59,69 @@ $lightRedCake: #7d4635;
 
 /* Hero-Header =====================================
 	================================================== */
-
 .hero-header {
-  background-color: $lightBlueCake;
-  position: relative;
-  color: white;
-  padding: 10vw;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vw;
+  position: relative;
+  background-color: $blueCakeShadow;
+  
+  &__img {
+    width: 300px;
+    border-radius: 50%;
+  }
+  
+  @media only screen and (min-width: 790px) {
+    flex-direction: row;
+    padding: 10vh 20vw;
+  }
+
+  &:after {
+    content: '';
+    background: url(../images/bakery_set.jpg);
+    background-size: contain;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  // waves
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(
+      circle at 10px -5px,
+      transparent 12px,
+      $lightYellowCake 13px
+    );
+  }
+  // &:after {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   background-repeat: repeat-x;
+  //   height: 15px;
+  //   background-size: 20px 20px;
+  //   background-image: radial-gradient(
+  //     circle at 10px 15px,
+  //     transparent 12px,
+  //     $brownCake 13px
+  //   );
+  // }
 }
 
 /* Sections ========================================
@@ -73,13 +133,31 @@ section > h2 {
 }
 
 .about {
-  background-color: $yellowPhoto;
+  background-image: linear-gradient(to right, $lightYellowCake, $yellowCake, $lightYellowCake);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 10vh 0;
+  position: relative;
+
+  // waves
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(
+      circle at 10px -5px,
+      transparent 12px,
+      white 13px
+    );
+  }
 
   p {
     width: 70%;
@@ -87,19 +165,52 @@ section > h2 {
 
   img {
     background-color: $lightBlueCake;
-    width: 150px;
-    height: 150px;
+    width: 350px;
     border-radius: 50%;
   }
 }
 
 .cakes {
-  background-color: $bluePhoto;
   text-align: center;
   padding: 10vh 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  &:after {
+    content: '';
+    background: url(../images/pastel.jpg);
+    background-size: contain;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+
+  // waves
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat-x;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(
+      circle at 10px -5px,
+      transparent 12px,
+      $brownCakeShadow 13px
+    );
+  }
+
+  h2 {
+    background-color: white;
+  }
 
   .cake__item {
     display: flex;
@@ -134,8 +245,46 @@ section > h2 {
 
 .contact {
   padding: 10vh;
-  background-color: $brownCake;
+  background-color: $brownCakeShadow;
   color: $lightOrangeCake;
+  position: relative;
+  font-weight: bold;
+
+  // &:before{
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-repeat: repeat-x;
+  //   height: 10px;
+  //   background-size: 20px 20px;
+  //   background-image: radial-gradient(circle at 10px -5px, transparent 12px, white 13px);
+  // }
+  // &:after{
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-repeat: repeat-x;
+  //   height: 15px;
+  //   background-size: 40px 20px;
+  //   background-image: radial-gradient(circle at 10px 15px, white 12px, transparent 13px);
+  // }
+
+  &:after {
+    content: '';
+    background: url(../images/bakery_set.jpg);
+    background-size: cover;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 
 .contact__title {
