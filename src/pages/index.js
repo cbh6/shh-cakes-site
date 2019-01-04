@@ -21,9 +21,64 @@ class Homepage extends React.Component {
           <h3>Nombre repostería</h3>
         </section>
 
-        <main>
-          <p>And the main section.</p>
-        </main>
+        <section className="about">
+          <h2>Sobre mí</h2>
+          <img className="about__avatar" />
+          <p className="about__description">
+            Me llamo María Asunción y me dedico a hacer tartas. Soy autodidacta
+            y en mis ratos libres me gusta realizar todo tipo de repostería.
+          </p>
+          {/* <p>Si deseas saber más o realizar algún pedido no dudes en ponerte en contacto conmigo</p> */}
+        </section>
+
+        <section className="cakes">
+          <h2>Tartas y dulces que realizo</h2>
+          <br />
+
+          <div className="cake__item">
+            <img className="cake__photo" />
+            <div className="cake__info">
+              <h3 className="cake__title">Tarta de Santiago</h3>
+              <p className="cake__description">
+                Tarta de almendra con chocolate blanco y cobertura de nata. Esta
+                hecha con almendra, nata y posee un suave toque a arándanos.
+                Deliciosa.
+              </p>
+            </div>
+          </div>
+
+          <div className="cake__item">
+            <img className="cake__photo" />
+            <div className="cake__info">
+              <h3 className="cake__title">Tarta de Santiago</h3>
+              <p className="cake__description">
+                Tarta de almendra con chocolate blanco y cobertura de nata
+              </p>
+            </div>
+          </div>
+          
+          <div className="cake__item">
+            <img className="cake__photo" />
+            <div className="cake__info">
+              <h3 className="cake__title">Tarta de Santiago</h3>
+              <p className="cake__description">
+                Tarta de almendra con chocolate blanco y cobertura de nata. Esta
+                hecha con almendra, nata y posee un suave toque a arándanos.
+                Deliciosa.
+              </p>
+            </div>
+          </div>
+
+          <div className="cake__item">
+            <img className="cake__photo" />
+            <div className="cake__info">
+              <h3 className="cake__title">Tarta de Santiago</h3>
+              <p className="cake__description">
+                Tarta de almendra con chocolate blanco y cobertura de nata
+              </p>
+            </div>
+          </div>
+        </section>
         {/* <section id="one" className="main style1">
                     <div className="grid-wrapper">
                         <div className="col-6">

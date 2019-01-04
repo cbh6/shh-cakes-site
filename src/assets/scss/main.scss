@@ -12,11 +12,11 @@ body {
   overflow: hidden;
   align-items: center;
   background-color: #422117;
-	padding: 20px 20px 0;
-	
-	@media only screen and (min-width: 790px) {
-		flex-direction: row;
-	}
+  padding: 20px 20px 0;
+
+  @media only screen and (min-width: 790px) {
+    flex-direction: row;
+  }
 
   &__link {
     color: white;
@@ -46,42 +46,80 @@ body {
 
 /* Hero-Header =====================================
 	================================================== */
-.svg-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: -1;
+
+.hero-header {
+  background-color: rgb(115, 216, 216);
+  position: relative;
+  color: #fff;
+  padding: 10vw;
+  text-align: center;
 }
 
-main {
-  background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  padding: 10vh 0 80vh;
-  position: relative;
-  text-align: center;
-  overflow: hidden;
+/* Sections ========================================
+  ================================================== */
+section > h2 {
+  margin-bottom: 2em;
+  font-weight: bold;
+}
 
-  &::after {
-    border-right: 2px dashed #eee;
-    content: '';
-    position: absolute;
-    top: calc(10vh + 1.618em);
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    height: 100%;
+.about {
+  background-color: #feffdc;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vh 0;
+
+  p {
+    width: 70%;
+  }
+
+  img {
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
   }
 }
 
-.hero-header {
-	background-color: rgb(115, 216, 216);
-  height: 200px;
-  position: relative;
-	color: #fff;
-	padding-top: 10vw;
-	padding-bottom: 30vw;
-	text-align: center;
+.cakes {
+  background-color: #dcfffb;
+  text-align: center;
+  padding: 10vh 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .cake__item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    
+    @media only screen and (min-width: 790px) {
+      &:nth-child(even) {
+        flex-direction: row;
+      }
+      &:nth-child(odd) {
+        flex-direction: row-reverse;
+      }
+
+      align-items: center;
+    }
+  }
+  
+  .cake__photo {
+    background-color: rgb(255, 225, 127);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+  }
+
+  .cake__description {
+    margin: 0 1em;
+    max-width: 60vw;
+  }
 }
 
 // @import 'libs/vars';
