@@ -60,6 +60,7 @@ body {
 section > h2 {
   margin-bottom: 2em;
   font-weight: bold;
+  text-align: center;
 }
 
 .about {
@@ -119,6 +120,46 @@ section > h2 {
   .cake__description {
     margin: 0 1em;
     max-width: 60vw;
+  }
+}
+
+.contact {
+  padding: 10vh;
+  background-color: #422117;
+  color: rgb(255, 214, 137);
+}
+
+.contact__title {
+  color: white;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1em;
+
+  input, textarea {
+    border-radius: 10px;
+    background-color: #7d4635;
+    border: 2px dashed orange;
+    padding: 15px;
+    color: white;
+  }
+}
+
+.contact__button {
+  border-radius: 10px;
+  background-color: rgb(247, 197, 105);
+  color: rgb(105, 80, 34);
+  width: 100%;
+  padding: 10px 0;
+  border: 1px solid #7d4635;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  &:hover {
+    background-color: orange;
+    cursor: pointer;
   }
 }
 

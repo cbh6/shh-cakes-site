@@ -56,7 +56,7 @@ class Homepage extends React.Component {
               </p>
             </div>
           </div>
-          
+
           <div className="cake__item">
             <img className="cake__photo" />
             <div className="cake__info">
@@ -78,6 +78,55 @@ class Homepage extends React.Component {
               </p>
             </div>
           </div>
+        </section>
+
+        <section className="contact">
+          <h2 className="contact__title">Contacto</h2>
+          <p>
+            Si deseas realizar algún pedido consultar alguna duda o ponerte en
+            contacto conmigo no dudes en enviarme un correo a través del
+            siguiente formulario
+          </p>
+          <form
+            role="form"
+            id="contact__form"
+            method="post"
+            action="https://formspree.io/info.agenciabecom@gmail.com"
+          >
+            <div className="contact__field">
+              <label className="control-label">Nombre</label>
+              <input
+                type="text"
+                name="Nombre"
+                id="name"
+                className="form-control"
+              />
+            </div>
+            <div className="contact__field">
+              <label className="control-label">Email</label>
+              <input
+                type="email"
+                name="Email"
+                id="email"
+                className="form-control"
+              />
+            </div>
+            <div className="contact__field">
+              <label className="control-label">Mensaje</label>
+              <textarea
+                name="Mensaje"
+                className="form-control"
+                id="message"
+                rows="6"
+              />
+            </div>
+            <button
+              type="submit"
+              className="contact__button"
+            >
+              Enviar
+            </button>
+          </form>
         </section>
         {/* <section id="one" className="main style1">
                     <div className="grid-wrapper">
